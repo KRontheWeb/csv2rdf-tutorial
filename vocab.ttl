@@ -1,0 +1,71 @@
+# baseURI: http://data.krw.d2s.labs.vu.nl/group20/vocab
+
+@prefix : <http://data.krw.d2s.labs.vu.nl/group20/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.krw.d2s.labs.vu.nl/group20/vocab>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+:Colour
+  rdf:type owl:Class ;
+  rdfs:label "Colour"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Country
+  rdf:type owl:Class ;
+  rdfs:label "Country"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Hobby
+  rdf:type owl:Class ;
+  rdfs:label "Hobby"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Person
+  rdf:type owl:Class ;
+  rdfs:label "Person"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Place
+  rdf:type owl:Class ;
+  rdfs:label "Place"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:address
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Person ;
+  rdfs:label "address"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:age
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Person ;
+  rdfs:label "age"^^xsd:string ;
+  rdfs:range xsd:int ;
+.
+:country
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "country"^^xsd:string ;
+.
+:favourite_colour
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:label "colour"^^xsd:string ;
+  rdfs:range :Colour ;
+.
+:hobby
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:label "hobby"^^xsd:string ;
+  rdfs:range :Hobby ;
+.
+:place
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:label "place"^^xsd:string ;
+  rdfs:range :Place ;
+.
